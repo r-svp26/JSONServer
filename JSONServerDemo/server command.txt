@@ -1,0 +1,9 @@
+﻿/* Start the JSON-Server */
+json-server --watch example.json
+/*  Using Curl */
+ curl -X GET localhost:3000/employee/ -H "Accept: application/json"
+
+/* Start the JSON-Server of routes */
+json-server --port 5000 --routes routes.json --watch example.json
+/*  Using Curl */
+curl -X GET localhost:5000/employee/ -H "Accept: application/json"
